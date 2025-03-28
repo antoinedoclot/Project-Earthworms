@@ -1,9 +1,10 @@
 #Chargement des données
-data_adultes <- read.csv2("Données_adultes_220325.csv") #Données des adultes
+data_adultes <- read.csv2("Données_adultes_280325.csv") #Données des adultes
 data_juvéniles <- read.csv2("Données_juvéniles_220325.csv") #Données des juvéniles
 
 str(data_juvéniles)
 str(data_adultes) #les données poids des adultes ne sont pas numériques
+library(dplyr)
 
 #Convertir les données "Poids" en numérique
 data_adultes <- data_adultes %>%
@@ -60,7 +61,7 @@ ggplot(biomasse_par_parcelle, aes(x = Pratiques, y = biomasse_totale, fill = Pra
   geom_boxplot(outlier.shape = NA, alpha = 0.7) +  # Suppression des outliers pour éviter le fouillis
   geom_jitter(width = 0.2, alpha = 0.5, color = "black") + # Ajout des points pour mieux voir la distribution
   scale_fill_manual(values = palette_colors) +
-  labs(title = "Biomasse totale des vers de terre par pratique agricole",
+  labs(title = "Biomasse de vers de terre par pratique agricole",
        x = "Pratique agricole",
        y = "Biomasse totale (g)") +
   theme_minimal(base_size = 14) +
@@ -69,9 +70,9 @@ ggplot(biomasse_par_parcelle, aes(x = Pratiques, y = biomasse_totale, fill = Pra
 # Graphique Nombre d'espèces
 ggplot(espèces_par_parcelle, aes(x = Pratiques, y = espèces_par_parcelle, fill = Pratiques)) +
   geom_boxplot(outlier.shape = NA, alpha = 0.7) +
-  geom_jitter(width = 0.2, alpha = 0.5, color = "black") +
+  #geom_jitter(width = 0.2, alpha = 0.5, color = "black") +
   scale_fill_manual(values = palette_colors) +
-  labs(title = "Nombre d'espèces différentes de vers de terre par pratique agricole",
+  labs(title = "Espèces de vers de terre par pratique agricole",
        x = "Pratique agricole",
        y = "Nombre d'espèces") +
   theme_minimal(base_size = 14) +
@@ -115,17 +116,81 @@ library(vegan)
 # Charger les packages nécessaires
 library(dplyr)
 
-# Calculer l'indice de Shannon par parcelle
 shannon_index <- data3 %>%
-  group_by(Site, Pratiques) %>%  # Grouper par parcelle et pratiques
-  summarise(H = -sum((table(Binomial)/sum(table(Binomial))) * log(table(Binomial)/sum(table(Binomial)))), .groups = "drop")
+  group_by(Site, Pratiques) %>%
+  summarise(H = diversity(table(Binomial), index = "shannon"), .groups = "drop")
 
-# Afficher les résultats
-print(shannon_index)
+# ANOVA pour l'indice de Shannon
+myAOV_shannon = aov(H ~ Pratiques, data = shannon_index)
+summary(myAOV_shannon)
 
-ggplot(shannon_index, aes(x = Pratiques, y = H, fill=Pratiques)) +
-  geom_boxplot() +
-  labs(title = "Nombre d'espèces différentes de vers de terre par pratique agricole",
+# Vérification de la normalité
+hist(residuals(myAOV_shannon))
+qqnorm(residuals(myAOV_shannon))
+qqline(residuals(myAOV_shannon))
+shapiro.test(residuals(myAOV_shannon))
+
+# Vérification de l'homoscédasticité
+bartlett.test(H ~ Pratiques, data = shannon_index)
+
+# Test de Kruskal-Wallis (si ANOVA non valide)
+kruskal.test(H ~ Pratiques, data = shannon_index)
+
+# Test de Tukey (si ANOVA valide)
+TukeyHSD(myAOV_shannon)
+
+ggplot(shannon_index, aes(x = Pratiques, y = H, fill = Pratiques)) +
+  geom_boxplot(outlier.shape = NA, alpha = 0.7) +
+  geom_jitter(width = 0.2, alpha = 0.5, color = "black") +
+  scale_fill_manual(values = palette_colors) +
+  labs(title = "Indice de Shannon des vers de terre par pratique agricole",
        x = "Pratique agricole",
-       y = "Nombre d'espèces") +
-  theme_minimal()
+       y = "Indice de Shannon") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none", 
+        plot.title.position = "plot",  # Positionner le titre correctement
+        plot.margin = margin(10, 10, 20, 10))  # Augmenter l'espace en bas
+
+
+
+# Agréger les données par parcelle
+abondance_par_parcelle <- data3 %>%
+  group_by(Site, Pratiques) %>%
+  summarise(Abondance_totale = sum(Abondance, na.rm = TRUE)) #.groups = "drop"
+
+# Calcul de la moyenne par pratique
+abondance_moyenne_par_pratique <- abondance_par_parcelle %>%
+  group_by(Pratiques) %>%
+  summarise(Abondance_moyenne = mean(Abondance_totale, na.rm = TRUE))
+
+# ANOVA pour l'abondance
+myAOV_abondance = aov(Abondance_totale ~ Pratiques, data = abondance_par_parcelle)
+summary(myAOV_abondance)
+kruskal.test(Abondance_totale ~ Pratiques, data = abondance_par_parcelle)
+
+# Vérification de la normalité des résidus
+hist(residuals(myAOV_abondance))
+qqnorm(residuals(myAOV_abondance))
+qqline(residuals(myAOV_abondance))
+shapiro.test(residuals(myAOV_abondance))
+
+# Vérification de l'homoscédasticité
+bartlett.test(Abondance_totale ~ Pratiques, data = abondance_par_parcelle)
+
+# Test de Kruskal-Wallis (si ANOVA non valide)
+kruskal.test(Abondance_totale ~ Pratiques, data = abondance_par_parcelle)
+
+# Test post-hoc de Tukey (si ANOVA valide)
+TukeyHSD(myAOV_abondance)
+
+# Graphique pour l'Abondance
+ggplot(abondance_par_parcelle, aes(x = Pratiques, y = Abondance_totale, fill = Pratiques)) +
+  geom_boxplot(outlier.shape = NA, alpha = 0.7) +
+  geom_jitter(width = 0.2, alpha = 0.5, color = "black") +
+  scale_fill_manual(values = palette_colors) +
+  labs(title = "Nombre total d'individus par pratique agricole",
+       x = "Pratique agricole",
+       y = "Nombre d'individus") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none")
+
