@@ -178,7 +178,7 @@ ggplot(diversity_indices, aes(x=Pratiques, y=Piélou, fill=Pratiques))+
   scale_fill_manual(values=palette_colors)+
   labs(title="Indice de Piélou de vers de terre par pratique agricole",
        x="Pratique agricole", 
-       y:"Indice de Piélou")+
+       y="Indice de Piélou")+
   theme_minimal(base_size=14)+
   theme(legend.position="none")
               
@@ -201,7 +201,7 @@ ggplot(diversity_indices, aes(x=Pratiques, y=Simpson, fill=Pratiques))+
   scale_fill_manual(values=palette_colors)+
   labs(title="Indice de Piélou de vers de terre par pratique agricole",
        x="Pratique agricole", 
-       y:"Indice de Simpson")+
+       y="Indice de Simpson")+
   theme_minimal(base_size=14)+
   theme(legend.position="none")
 
@@ -224,7 +224,7 @@ ggplot(diversity_indices, aes(x=Pratiques, y=Hill, fill=Pratiques))+
   scale_fill_manual(values=palette_colors)+
   labs(title="Indice de Hill de vers de terre par pratique agricole",
        x="Pratique agricole", 
-       y:"Indice de Simpson")+
+       y="Indice de Simpson")+
   theme_minimal(base_size=14)+
   theme(legend.position="none")
 
