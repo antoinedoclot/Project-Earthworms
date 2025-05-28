@@ -1,0 +1,458 @@
+[
+    {
+        "Tool": "Bineuse (culture sarclées)",
+        "Speed": 7,
+        "WorkType": 0.8,
+        "Deep": 3,
+        "Soil": 0.8,
+        "W": "SD"
+    },
+    {
+        "Tool": "Bineuse (culture sarclées)",
+        "Speed": 8,
+        "WorkType": 0.8,
+        "Deep": 3,
+        "Soil": 0.7,
+        "W": "SD"
+    },
+    {
+        "Tool": "Bineuse Butteuse",
+        "Speed": 5,
+        "WorkType": 0.8,
+        "Deep": 10,
+        "Soil": 0.8,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Bineuse céréales",
+        "Speed": 5,
+        "WorkType": 0.8,
+        "Deep": 3,
+        "Soil": 0.6,
+        "W": "SD"
+    },
+    {
+        "Tool": "Broyeur",
+        "Speed": 6,
+        "WorkType": 0.2,
+        "Deep": 1,
+        "Soil": 1,
+        "W": "SDCV"
+    },
+    {
+        "Tool": "Butteuse à tôle",
+        "Speed": 8,
+        "WorkType": 0.8,
+        "Deep": 20,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Charrue (15-18 cm)",
+        "Speed": 8,
+        "WorkType": 1,
+        "Deep": 18,
+        "Soil": 1,
+        "W": "Labour"
+    },
+    {
+        "Tool": "Charrue 25cm",
+        "Speed": 8,
+        "WorkType": 1,
+        "Deep": 25,
+        "Soil": 1,
+        "W": "Labour"
+    },
+    {
+        "Tool": "Charrue déchaumeuse (<15cm)",
+        "Speed": 8,
+        "WorkType": 1,
+        "Deep": 13,
+        "Soil": 1,
+        "W": "Labour"
+    },
+    {
+        "Tool": "Chisel à dents droites (Bic)",
+        "Speed": 8,
+        "WorkType": 0.8,
+        "Deep": 16,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Chisel à pattes d'oie",
+        "Speed": 8,
+        "WorkType": 0.8,
+        "Deep": 16,
+        "Soil": 1,
+        "W": "TCS Lourd"
+    },
+    {
+        "Tool": "Combiné rotative + semoir",
+        "Speed": 6,
+        "WorkType": 0.8,
+        "Deep": 5,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Croskillette",
+        "Speed": 10,
+        "WorkType": 0.7,
+        "Deep": 3,
+        "Soil": 0.7,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Dechaumeur à disque Cover-crop",
+        "Speed": 7,
+        "WorkType": 0.8,
+        "Deep": 10,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Déchaumeur à disque Cover-crop",
+        "Speed": 7,
+        "WorkType": 0.8,
+        "Deep": 10,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Déchaumeur à disques indépendant",
+        "Speed": 14,
+        "WorkType": 0.7,
+        "Deep": 5,
+        "Soil": 0.8,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Décompacteur - déchaumeur",
+        "Speed": 6,
+        "WorkType": 0.8,
+        "Deep": 25,
+        "Soil": 1,
+        "W": "TCS Lourd"
+    },
+    {
+        "Tool": "Décompacteur - fissurateur",
+        "Speed": 6,
+        "WorkType": 0.4,
+        "Deep": 35,
+        "Soil": 0.4,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Desherbage Thermique",
+        "Speed": 0,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Distributeur d'engrais",
+        "Speed": 15,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Drone",
+        "Speed": 0,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "SD"
+    },
+    {
+        "Tool": "Ecimeuse",
+        "Speed": 5,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Epandeur à fumier",
+        "Speed": 8,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Epandeur à lisier",
+        "Speed": 8,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Epandeur Quad",
+        "Speed": 15,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Faucheuse-andaineuse",
+        "Speed": 5,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Herse + rouleau emotteur",
+        "Speed": 10,
+        "WorkType": 0.7,
+        "Deep": 6,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Herse à disques",
+        "Speed": 10,
+        "WorkType": 0.8,
+        "Deep": 10,
+        "Soil": 1,
+        "W": "SD"
+    },
+    {
+        "Tool": "Herse à paille",
+        "Speed": 15,
+        "WorkType": 0.7,
+        "Deep": 3,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Herse bêche roulante",
+        "Speed": 15,
+        "WorkType": 0.7,
+        "Deep": 3,
+        "Soil": 0.8,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Herse bio fraise",
+        "Speed": 28,
+        "WorkType": 0.8,
+        "Deep": 5,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Herse de recouvrement",
+        "Speed": 7,
+        "WorkType": 0.7,
+        "Deep": 5,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Herse étrille",
+        "Speed": 10,
+        "WorkType": 0.7,
+        "Deep": 2,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Herse rotative",
+        "Speed": 21,
+        "WorkType": 0.8,
+        "Deep": 12,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Houe rotative",
+        "Speed": 15,
+        "WorkType": 0.8,
+        "Deep": 3,
+        "Soil": 0.9,
+        "W": "SD"
+    },
+    {
+        "Tool": "Moissoneuse-batteuse",
+        "Speed": 5,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Peigne de nivellement",
+        "Speed": 15,
+        "WorkType": 0.7,
+        "Deep": 3,
+        "Soil": 1,
+        "W": "TCS Lourd"
+    },
+    {
+        "Tool": "Planteuse pommes de terre",
+        "Speed": 7,
+        "WorkType": 0.8,
+        "Deep": 20,
+        "Soil": 1,
+        "W": "TCS Lourd"
+    },
+    {
+        "Tool": "Pulvérisateur",
+        "Speed": 18,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Récolteuse betteraves",
+        "Speed": 4,
+        "WorkType": 0.8,
+        "Deep": 20,
+        "Soil": 0.8,
+        "W": "TCS Lourd"
+    },
+    {
+        "Tool": "Récolteuse pommes de terre ",
+        "Speed": 4,
+        "WorkType": 0.8,
+        "Deep": 20,
+        "Soil": 0.8,
+        "W": "TCS Lourd"
+    },
+    {
+        "Tool": "Roto étrille",
+        "Speed": 10,
+        "WorkType": 0.7,
+        "Deep": 2,
+        "Soil": 1,
+        "W": "SD"
+    },
+    {
+        "Tool": "Rouleau Cambridge",
+        "Speed": 7,
+        "WorkType": 0.2,
+        "Deep": 1,
+        "Soil": 0.8,
+        "W": "SDCV"
+    },
+    {
+        "Tool": "Rouleau FACA",
+        "Speed": 10,
+        "WorkType": 0.2,
+        "Deep": 1,
+        "Soil": 0.4,
+        "W": "SDCV"
+    },
+    {
+        "Tool": "Rouleau Hacheur",
+        "Speed": 14,
+        "WorkType": 0.2,
+        "Deep": 1,
+        "Soil": 0.8,
+        "W": "SDCV"
+    },
+    {
+        "Tool": "Rouleau lisse",
+        "Speed": 7,
+        "WorkType": 0.2,
+        "Deep": 1,
+        "Soil": 0.8,
+        "W": "SDCV"
+    },
+    {
+        "Tool": "Scalpeur",
+        "Speed": 8,
+        "WorkType": 0.8,
+        "Deep": 2,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Semoir à céréales",
+        "Speed": 8,
+        "WorkType": 0.4,
+        "Deep": 4,
+        "Soil": 0.8,
+        "W": "SDCV"
+    },
+    {
+        "Tool": "Semoir monograines",
+        "Speed": 8,
+        "WorkType": 0.4,
+        "Deep": 4,
+        "Soil": 0.5,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Semoir SD à dent",
+        "Speed": 5,
+        "WorkType": 0.3,
+        "Deep": 2,
+        "Soil": 0.2,
+        "W": "SDCV"
+    },
+    {
+        "Tool": "Semoir SD à disque",
+        "Speed": 8,
+        "WorkType": 0.2,
+        "Deep": 2,
+        "Soil": 0.2,
+        "W": "SDCV"
+    },
+    {
+        "Tool": "Semoir à la volée",
+        "Speed": 8,
+        "WorkType": 0,
+        "Deep": 0,
+        "Soil": 0,
+        "W": "Pas applicable"
+    },
+    {
+        "Tool": "Striptill",
+        "Speed": 7,
+        "WorkType": 0.4,
+        "Deep": 12,
+        "Soil": 0.4,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Tamiseuse",
+        "Speed": 3,
+        "WorkType": 0.8,
+        "Deep": 20,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Vibroculteur léger (dents flexible)",
+        "Speed": 10,
+        "WorkType": 0.8,
+        "Deep": 7,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Vibroculteur lourd (dents droites)",
+        "Speed": 9,
+        "WorkType": 0.8,
+        "Deep": 10,
+        "Soil": 1,
+        "W": "TCS Léger"
+    },
+    {
+        "Tool": "Vibroculteur lourd (pattes d'oie)",
+        "Speed": 9,
+        "WorkType": 0.8,
+        "Deep": 8,
+        "Soil": 1,
+        "W": "TCS Léger"
+    }
+]
